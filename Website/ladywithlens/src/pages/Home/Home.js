@@ -19,8 +19,8 @@ const Home = () => {
             <p>Elevate your brand with our unique visual identity services.</p>
           </div>
           <div className={styles.serviceCard}>
-            <h3>Web Design</h3>
-            <p>Create stunning, user-friendly websites that reflect your brand.</p>
+            <h3>Photography & Videography</h3>
+            <p>Capture your most cherished moments and tell your story through stunning photography and engaging videography services.</p>
           </div>
           <div className={styles.serviceCard}>
             <h3>Marketing Materials</h3>
