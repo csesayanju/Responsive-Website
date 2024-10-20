@@ -1,0 +1,108 @@
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--primary-color); /* Your brand color */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo container */
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Change cursor to pointer for the logo */
+  }
+  
+  .logo {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: transform 0.3s ease; /* Animation on hover and active */
+  }
+  
+  /* Hover effect for desktop */
+  .logo:hover {
+    transform: rotate(360deg); /* Rotate logo on hover */
+  }
+  
+  /* Active effect for mobile */
+  .logo.active {
+    transform: scale(1.1); /* Scale up logo on active state */
+  }
+  
+  .brandName {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Navigation */
+  .navbar {
+    display: flex;
+  }
+  
+  .navList {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  .navList li {
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transition for color change */
+  }
+  
+  .navList li:hover {
+    color: var(--secondary-color); /* Change color on hover */
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none; /* Hidden on larger screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer; /* Pointer cursor for hamburger menu */
+  }
+  
+  .bar {
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease; /* Transition for bars */
+  }
+  
+  /* Responsive Design for mobile */
+  @media (max-width: 768px) {
+    .navList {
+      display: none; /* Hide the menu initially */
+      flex-direction: column;
+      gap: 15px;
+      background-color: var(--primary-color); /* Background for dropdown */
+      position: absolute;
+      top: 80px; /* Position below header */
+      right: 0;
+      width: 100%; /* Full width */
+      padding: 20px 0;
+    }
+  
+    .showMenu .navList {
+      display: flex; /* Show menu when active */
+    }
+  
+    .hamburger {
+      display: flex; /* Show hamburger on mobile */
+    }
+  
+    .logo {
+      width: 60px; /* Smaller logo on mobile */
+    }
+  }
+  
